@@ -27,6 +27,7 @@ public class Index extends HttpServlet {
             List<News> newsList = new ArrayList<>();
             while (rs.next()) {
                 News news = new News();
+                news.setId(Integer.parseInt(rs.getString("id")));
                 news.setContent(rs.getString("content"));
                 news.setHomePhoto(rs.getString("home_photo"));
                 news.setTitle(rs.getString("title"));

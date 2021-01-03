@@ -20,7 +20,8 @@
             background-image: url("resource/img/bg.png");
             background-size: cover;
         }
-        .home{
+
+        .home {
             /*background: black;*/
             /*position: fixed;*/
             /*top: 0;*/
@@ -62,30 +63,38 @@
             outline: none;
             color: white;
         }
-        .nav-bottom{
+
+        .nav-bottom {
             text-align: center;
             list-style: none;
             outline: none;
         }
-        .nav-bottom a{
+
+        .nav-bottom a {
             text-decoration: none;
             color: white;
             display: block;
             font-size: 1.2em;
             width: 100px;
         }
-        .nav-bottom li{
+
+        .nav-bottom li {
             margin: 5px 40px;
             list-style: none;
             display: inline-block;
         }
-        .body-title{
+
+        .body-title {
             height: available;
             /*border: 1px solid pink;*/
             text-align: center;
         }
-        .body-title p{
-            margin-top: 200px;
+
+        .body-title p {
+            position: absolute;
+            bottom: 200px;
+            left: 40%;
+            margin-bottom: 100px;
             display: inline-block;
             width: fit-content;
             font-size: 5em;
@@ -93,7 +102,8 @@
             border-width: 4px;
 
         }
-        .more{
+
+        .more {
             width: 100%;
             position: absolute;
             bottom: 0;
@@ -102,52 +112,95 @@
             text-align: center;
             padding: 5px;
         }
-        .more p{
+
+        .more p {
             display: inline-block;
             font-size: 1.2em;
             color: white;
         }
-        .more-i{
+
+        .more-i {
             font-size: 1.2em;
             margin: auto;
             color: white;
         }
-        .news{
+
+        .news {
             background: rgb(250, 246, 239);
             /*position: absolute;*/
             z-index: 10;
         }
 
-        .card-row{
+        .card-row {
             margin: 40px auto;
             display: flex;
         }
+
         .big-card {
             height: 350px;
             margin: auto;
             border: 1px solid black;
         }
-        .small-card{
+
+        .small-card {
             height: 350px;
             margin: auto;
             border: 1px solid black;
 
         }
-        .big-card img{
+
+        .big-card img {
             width: 640px;
             height: 350px;
         }
 
-        .small-card img{
+        .small-card img {
             width: 300px;
             height: 200px;
         }
-        .news .header{
+
+        .news .header {
             margin-bottom: 20px;
             text-align: center;
         }
-        .news .header p{
+
+        .news .header p {
             font-size: 3em;
+        }
+
+        .small-card .title {
+            font-size: 1.3em;
+            margin: 5px;
+        }
+
+        .small-card .content {
+            margin: 5px;
+        }
+
+        .big-card .title {
+            position: relative;
+            top: -60px;
+            left: 10px;
+            font-size: 2em;
+
+        }
+
+        .big-card .content {
+            display: none;
+        }
+
+        .nav-bottom .nav-bottom-item:hover {
+            border-bottom: 1px solid white;
+        }
+
+        .nav-top .nav-top-item:hover {
+            background: grey;
+        }
+
+        .nav-teachers-item {
+            background: black;
+            display: flex;
+            flex-direction: column;
         }
     </style>
 </head>
@@ -163,19 +216,19 @@
                 </div>
                 <div class="nav-top">
                     <ul>
-                        <li><a href="#">数字东林</a></li>
-                        <li><a href="#">电子邮件</a></li>
-                        <li><a href="#">校园电话</a></li>
+                        <li class="nav-top-item"><a href="#">数字东林</a></li>
+                        <li class="nav-top-item"><a href="#">电子邮件</a></li>
+                        <li class="nav-top-item"><a href="#">校园电话</a></li>
                     </ul>
                 </div>
             </div>
             <div class="nav-bottom">
                 <ul>
-                    <li><a href="">首页</a></li>
-                    <li><a href="">关于我们</a></li>
-                    <li><a href="">教师队伍</a></li>
-                    <li><a href="">实验室</a></li>
-                    <li><a href="">最新动态</a></li>
+                    <li id="home" class="nav-bottom-item"><a href="">首页</a></li>
+                    <li id="about" class="nav-bottom-item"><a href="">关于我们</a></li>
+                    <li id="teachers" class="nav-bottom-item"><a href="">教师队伍</a>                    </li>
+                    <li id="lab" class="nav-bottom-item"><a href="">实验室</a></li>
+                    <li id="news" class="nav-bottom-item"><a href="">最新动态</a></li>
                 </ul>
             </div>
 
@@ -200,35 +253,51 @@
         </div>
         <div class="cards">
             <div class="card-row">
-<%--                <c:forEach items="${newsList}" var="n" varStatus="s">--%>
-<%--                    ${n.title}--%>
-<%--                </c:forEach>--%>
-                <div class="big-card">
-                    <img src="resource/img/card-default.png" alt="default">
-                </div>
-                <div class="small-card">
-                    <img src="resource/img/card-default.png" alt="default">
+                <c:forEach items="${newsList}" var="v" varStatus="s" begin="0" end="2">
+                    <c:set var="type" value="small-card"/>
+                    <c:if test="${s.index == 0}">
+                        <c:set var="type" value="big-card"/>
+                    </c:if>
 
-                </div>
-                <div class="small-card"><img src="resource/img/card-default.png" alt="default">
-                </div>
+                    <div class="${type}">
+                        <img src="resource/img/card-default.png" alt="default">
+                        <p class="title">${v.title}</p>
+                        <p class="content">${v.content}</p>
+                    </div>
+                </c:forEach>
             </div>
             <div class="card-row">
-                <div class="small-card"><img src="resource/img/card-default.png" alt="default">
-                </div>
-                <div class="small-card"><img src="resource/img/card-default.png" alt="default">
-                </div>
-                <div class="big-card">
-                    <img src="resource/img/card-default.png" alt="default">
+                <c:forEach items="${newsList}" var="v" varStatus="s" begin="3" end="5">
+                    <c:set var="type" value="small-card"/>
+                    <c:if test="${s.index == 5}">
+                        <c:set var="type" value="big-card"/>
+                    </c:if>
 
-                </div>
+                    <div class="${type}">
+                        <img src="resource/img/card-default.png" alt="default">
+                        <p class="title">${v.title}</p>
+                        <p class="content">${v.content}</p>
+                    </div>
+                </c:forEach>
             </div>
+
         </div>
         <div>
             <a href="">更多</a>
         </div>
     </div>
+</div>
 
 </div>
+
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+    $(function () {
+        $(".big-card").click(function () {
+            let url = ${base} +"api/news/info"
+            window.location.href = url
+        })
+    })
+</script>
 </body>
 </html>
