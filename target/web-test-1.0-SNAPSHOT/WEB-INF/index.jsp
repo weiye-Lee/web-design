@@ -17,7 +17,7 @@
         }
 
         .main {
-            background-image: url("/resource/img/bg.png");
+            background-image: url("resource/img/bg.png");
             background-size: cover;
         }
         .home{
@@ -200,6 +200,9 @@
         </div>
         <div class="cards">
             <div class="card-row">
+<%--                <c:forEach items="${newsList}" var="n" varStatus="s">--%>
+<%--                    ${n.title}--%>
+<%--                </c:forEach>--%>
                 <div class="big-card">
                     <img src="resource/img/card-default.png" alt="default">
                 </div>

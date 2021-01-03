@@ -17,7 +17,7 @@
         }
 
         .main {
-            background-image: url("/resource/img/bg.png");
+            background-image: url("resource/img/bg.png");
             background-size: cover;
         }
         .home{
@@ -200,6 +200,12 @@
         </div>
         <div class="cards">
             <div class="card-row">
+                <c:forEach items="${newsList}" var="n" varStatus="s">
+                    <c:set var="card-type" value="small-card"/>
+                    <c:if test="s.count == 1 || s.count == 6">
+                        <c:set var="card-type" value="big-card"/>
+                    </c:if>
+                </c:forEach>
                 <div class="big-card">
                     <img src="resource/img/card-default.png" alt="default">
                 </div>

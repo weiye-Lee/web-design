@@ -8,7 +8,7 @@ public class News {
     private String homePhoto;
     private String content;
     private LocalDateTime time;
-    private Boolean showAble;
+    private int showAble;
     private int level;
     private User user;
 
@@ -60,11 +60,11 @@ public class News {
         this.time = time;
     }
 
-    public Boolean getShowAble() {
+    public int getShowAble() {
         return showAble;
     }
 
-    public void setShowAble(Boolean showAble) {
+    public void setShowAble(int showAble) {
         this.showAble = showAble;
     }
 
