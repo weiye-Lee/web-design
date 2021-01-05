@@ -206,46 +206,17 @@
 </head>
 <body>
 <div class="main">
+    <%@include file="header.jsp"%>
 
-    <div class="home">
-        <div class="nav">
-            <div class="nav-header">
-                <div class="logo">
-                    <p>东北林业大学</p>
-                    <i class="material-icons">school</i>
-                </div>
-                <div class="nav-top">
-                    <ul>
-                        <li class="nav-top-item"><a href="#">数字东林</a></li>
-                        <li class="nav-top-item"><a href="#">电子邮件</a></li>
-                        <li class="nav-top-item"><a href="#">校园电话</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="nav-bottom">
-                <ul>
-                    <li id="home" class="nav-bottom-item"><a href="">首页</a></li>
-                    <li id="about" class="nav-bottom-item"><a href="">关于我们</a></li>
-                    <li id="teachers" class="nav-bottom-item"><a href="">教师队伍</a>                    </li>
-                    <li id="lab" class="nav-bottom-item"><a href="">实验室</a></li>
-                    <li id="news" class="nav-bottom-item"><a href="">最新动态</a></li>
-                </ul>
-            </div>
-
+    <div class="content">
+        <div class="body-title">
+            <p>software</p>
         </div>
-
-        <div class="content">
-            <div class="body-title">
-                <p>software</p>
-            </div>
-            <div class="more">
-                <p>more</p>
-                <i class="material-icons more-i">expand_more</i>
-            </div>
+        <div class="more">
+            <p>more</p>
+            <i class="material-icons more-i">expand_more</i>
         </div>
-
     </div>
-
     <div class="news">
 
         <div class="header">

@@ -1,0 +1,13 @@
+.sidebar {
+    text-align: center;
+}
+
+.sidebar .header {
+    background: blue;
+}
+
+.sidebar .list {
+    display: flex;
+    flex-direction: column;
+}
+
