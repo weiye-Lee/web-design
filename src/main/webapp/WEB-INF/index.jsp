@@ -17,7 +17,7 @@
         }
 
         .main {
-            background-image: url("resource/img/bg.png");
+            background-image: url("/resource/img/bg.png");
             background-size: cover;
         }
 

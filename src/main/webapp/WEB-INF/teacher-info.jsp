@@ -10,7 +10,21 @@
 <head>
     <title>teacher-info</title>
 </head>
+<%@include file="sidebar-css.jsp"%>
 <body>
+<div class="sidebar">
+    <div class="header"></div>
+    <div class="list">
+        <%--        点击跳转到不同的页面--%>
+        <ul>
+            <li><a href="">教授</a></li>
+            <li><a href="">副教授</a></li>
+            <li><a href="">讲师</a></li>
+        </ul>
+    </div>
+</div>
+<div class="content">
 
+</div>
 </body>
 </html>

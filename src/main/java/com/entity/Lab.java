@@ -5,10 +5,19 @@ public class Lab {
     private String introduction;
     private String shortText; // 简介
     private String direction;
+    private String class_name;
 //    private Teacher teacher;
 
     public int getId() {
         return id;
+    }
+
+    public String getClass_name() {
+        return class_name;
+    }
+
+    public void setClass_name(String class_name) {
+        this.class_name = class_name;
     }
 
     public void setId(int id) {
