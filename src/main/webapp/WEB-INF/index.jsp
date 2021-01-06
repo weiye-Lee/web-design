@@ -18,7 +18,7 @@
 
         .main {
             height: 100vh;
-            background: darkgreen;
+            background: url("resource/img/bg2.jpg");
         }
         .img {
             position: relative;
@@ -39,6 +39,7 @@
             border: 1px solid black;
             left: 280px;
             padding: 10px;
+            background: darkgrey;
         }
         .news >p {
             margin: auto;
@@ -48,6 +49,41 @@
             text-decoration: none;
             list-style: none;
         }
+        /*-----------------模拟布局--------------------------*/
+        .row{
+            display:flex;
+            flex-warp:warp;/*超出项自动换行，从而自动的实现响应式布局*/
+            align-content: flex-start;/*行中元素居上对齐纵向不拉伸*/
+        }
+        .col-md-1{width:8.33333333%;}
+        .col-md-2{width:16.6666667%;}
+        .col-md-3{width:25%;}
+        .col-md-4{width:33.33333333%;}
+        .col-md-5{width:41.66666667%;}
+        .col-md-6{width:50%;}
+        .col-md-7{width:58.33333333%;}
+        .col-md-8{width:66.6666667%;}
+        .col-md-9{width:75%;}
+        .col-md-10{width:83.33333333%;}
+        .col-md-11{width:91.66666667%;}
+        .col-md-12{width:100%;}
+        /*--------------------轮播图----------------------*/
+        #box{
+            width:100vw;
+            height:500px;
+            position:relative;
+            overflow:hidden;
+        }
+        #box img{
+            width: 100%;
+            height: 100%;
+        }
+
+        .slide{
+            width:100vw;
+            height:100%;
+            position:absolute;
+        }
 
     </style>
 </head>
@@ -55,10 +91,10 @@
 <div class="main">
     <%@include file="header.jsp"%>
     <div class="img">
-        <img src="resource/img/home-img.png" alt="home_png">
+        <img src="resource/img/home-img.png" alt="default">
     </div>
     <div class="news">
-        <p>新闻</p>
+        <h1>新闻链接</h1>
         <ul>
             <c:forEach items="${newsList}" var="u">
                 <li>
@@ -72,10 +108,6 @@
 </div>
 
 <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script>
-    $(function () {
-        // none
-    })
-</script>
+
 </body>
 </html>

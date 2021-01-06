@@ -17,7 +17,7 @@ public class NewsService {
     }
 
     public News findById(int id) {
-        String sql = "SELECT * FROM news WHERE id = ?";
+        String sql = "SELECT * FROM NEWS WHERE id = ?";
         News news = new News();
         try (
                 Connection conn = DataSourceUtils.getConnection();

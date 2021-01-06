@@ -19,6 +19,7 @@
             box-sizing: border-box;
         }
         body{
+            background: url(resource/img/bg2.jpg);
         }
 
         .home {
@@ -156,7 +157,7 @@
                         <li><a href="teacherInfo?level=3">讲师</a></li>
                     </ul>
                 </li>
-                <li id="lab" class="nav-bottom-item float"><a href="">实验室</a>
+                <li id="lab" class="nav-bottom-item float"><a href="labInfo?id=1">实验室</a>
                     <ul>
                         <li><a href="labInfo?id=1"  target="_blank">923实验室</a></li>
                         <li><a href="labInfo?id=2"  target="_blank">925实验室</a></li>

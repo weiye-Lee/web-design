@@ -31,7 +31,6 @@
 <%@include file="header.jsp" %>
 <div class="content">
     <%--    通过EL表达式获取要显示的值--%>
-    <h1>news</h1>
     <h1>${newsInfo.title}</h1>
     <p>${newsInfo.content}</p>
     <p id="time">2020/1/6 11:21</p>
