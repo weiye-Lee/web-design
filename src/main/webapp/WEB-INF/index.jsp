@@ -265,7 +265,7 @@
 <script>
     $(function () {
         $(".big-card").click(function () {
-            let url = ${base} +"api/news/info"
+            let url = ${base} +"newsInfo"
             window.location.href = url
         })
     })

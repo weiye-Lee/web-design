@@ -8,6 +8,8 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
+    <c:url var="base" value="/"/>
+    <base href="${base}">
     <title>Title</title>
     <link href="https://cdn.bootcss.com/material-design-icons/3.0.1/iconfont/material-icons.css" rel="stylesheet">
     <style>
@@ -146,16 +148,16 @@
                 <li id="about" class="nav-bottom-item"><a href="">关于我们</a></li>
                 <li id="teachers" class="nav-bottom-item float"><a href="">教师队伍</a>
                     <ul>
-                        <li><a href="api/info/teacher?level=1">教授</a></li>
-                        <li><a href="api/info/teacher?level=2">副教授</a></li>
-                        <li><a href="api/info/teacher?level=3">讲师</a></li>
+                        <li><a href="teacherInfo?level=1">教授</a></li>
+                        <li><a href="teacherInfo?level=2">副教授</a></li>
+                        <li><a href="teacherInfo?level=3">讲师</a></li>
                     </ul>
                 </li>
                 <li id="lab" class="nav-bottom-item float"><a href="">实验室</a>
                     <ul>
-                        <li><a href="api/info/lab?id=1"  target="_blank">923实验室</a></li>
-                        <li><a href="api/info/lab?id=2"  target="_blank">925实验室</a></li>
-                        <li><a href="api/info/lab?id=3" target="_blank">927实验室</a></li>
+                        <li><a href="labInfo?id=1"  target="_blank">923实验室</a></li>
+                        <li><a href="labInfo?id=2"  target="_blank">925实验室</a></li>
+                        <li><a href="labInfo?id=3" target="_blank">927实验室</a></li>
                     </ul>
                 </li>
                 <li id="news" class="nav-bottom-item"><a href="">最新动态</a></li>

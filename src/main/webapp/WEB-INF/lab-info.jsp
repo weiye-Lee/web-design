@@ -18,9 +18,9 @@
     <div class="list">
         <%--        点击跳转到不同的页面--%>
         <ul>
-            <li><a href="lab?id=1">923实验室</a></li>
-            <li><a href="lab?id=2">925实验室</a></li>
-            <li><a href="lab?id=3">927实验室</a></li>
+            <li><a href="labInfo?id=1">923实验室</a></li>
+            <li><a href="labInfo?id=2">925实验室</a></li>
+            <li><a href="labInfo?id=3">927实验室</a></li>
         </ul>
     </div>
 </div>
