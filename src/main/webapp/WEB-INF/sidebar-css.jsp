@@ -14,7 +14,8 @@
     }
     body{
         height: 100vh;
-        background: url("/resource/img/bg.png");
+        /*background: url("/resource/img/bg.png");*/
+        background: darkgreen;
     }
     .sidebar {
         position: relative;
@@ -44,8 +45,9 @@
         padding: 10px;
         z-index: 5;
         width: 80vw;
-        border: 1px solid pink;
-        height: 80vh;
+        /*border: 1px solid pink;*/
+        height: 50vh;
+        background: darkgray;
         position: relative;
         top: -600px;
         left: 200px;

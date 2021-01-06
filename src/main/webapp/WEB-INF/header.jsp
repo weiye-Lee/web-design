@@ -19,7 +19,6 @@
             box-sizing: border-box;
         }
         body{
-            background: url("/resource/img/bg.png");
         }
 
         .home {
@@ -117,11 +116,15 @@
         }
 
         .nav-bottom .nav-bottom-item:hover {
-            border-bottom: 1px solid white;
+            /*border-bottom: 1px solid white;*/
+            background: darkgray;
         }
 
         .nav-top .nav-top-item:hover {
             background: grey;
+        }
+        .nav-header{
+            display: none;
         }
     </style>
 </head>
@@ -144,9 +147,9 @@
         </div>
         <div class="nav-bottom">
             <ul>
-                <li id="home" class="nav-bottom-item"><a href="">首页</a></li>
-                <li id="about" class="nav-bottom-item"><a href="">关于我们</a></li>
-                <li id="teachers" class="nav-bottom-item float"><a href="">教师队伍</a>
+                <li id="home" class="nav-bottom-item"><a href="api/index">首页</a></li>
+                <li id="about" class="nav-bottom-item"><a href="api/index">关于我们</a></li>
+                <li id="teachers" class="nav-bottom-item float"><a href="teacherInfo?level=1">教师队伍</a>
                     <ul>
                         <li><a href="teacherInfo?level=1">教授</a></li>
                         <li><a href="teacherInfo?level=2">副教授</a></li>

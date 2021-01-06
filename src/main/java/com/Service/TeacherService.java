@@ -66,7 +66,6 @@ public class TeacherService {
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }
-        System.out.println(teacher.toString());
         return teacher;
     }
 }

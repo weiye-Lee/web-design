@@ -13,8 +13,16 @@
     <base href="${base}">
     <title>teacher-info</title>
     <style>
-        .content th + tr{
-            border: 1px solid blueviolet;
+        /*.content th {*/
+        /*    display: inline-block;*/
+        /*    padding: 5px;*/
+        /*    width: 50px;*/
+        /*    border: 1px solid blueviolet;*/
+        /*}*/
+
+        .content tr{
+            display: block;
+            width: 50px;
         }
     </style>
 </head>
@@ -33,20 +41,15 @@
     </div>
 </div>
 <div class="content">
-    <table>
-        <tr>
-            <th>姓名</th>
-            <th>性别</th>
-            <th>详情</th>
-        </tr>
-
-    </table>
     <c:forEach items="${list}" var="u">
-        <tr>
-            <td>${u.name}</td>
-            <td>${u.sex}</td>
-            <td><a href="info?id=${u.id}">详情</a></td>
-        </tr>
+        <h1>${u.name}</h1>
+<%--        <p>职称：${u.level}</p>--%>
+        <c:set var="sex" value="男"/>
+        <c:if test="${u.sex} == 0" >
+            <c:set var="sex" value="女"/>
+        </c:if>
+        <p>性别：${sex}</p>
+        <a href="info?id=${u.id}">详情</a>
     </c:forEach>
 </div>
 </body>
